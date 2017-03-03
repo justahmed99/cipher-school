@@ -35,8 +35,10 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Caesar.h" />
+		<Unit filename="include/ROT13.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Caesar.cpp" />
+		<Unit filename="src/ROT13.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
