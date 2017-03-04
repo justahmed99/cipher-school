@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Caesar.h"
 #include "ROT13.h"
+#include "Affine.h"
 
 using namespace std;
 
@@ -30,6 +31,17 @@ int main() {
             r->print();
             break;
         }
+        case 3 : {
+            cout << "---- Affine ----" << endl;
+            string input;
+            int a, b;
+            cout << "Input string : "; cin >> input;
+            cout << "Input key a : "; cin >> a;
+            cout << "Input key b : "; cin >> b;
+            Affine *af = new Affine(input, a, b);
+            af->print();
+            break;
+        }
         default : {
             cout << "Your choice isn't found" << endl;
         }
@@ -53,4 +65,5 @@ void menu() {
     cout << "---- Cipher Menu ----" << endl;
     cout << "1. Caesar" << endl;
     cout << "2. ROT13" << endl;
+    cout << "3. Affine" << endl;
 }

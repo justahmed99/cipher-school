@@ -1,10 +1,5 @@
 #include "Caesar.h"
 
-#include <iostream>
-#include <string>
-#include <string.h>
-using namespace std;
-
 Caesar::Caesar(string i, int k) {
     this->input = i;
     this->key = k;
