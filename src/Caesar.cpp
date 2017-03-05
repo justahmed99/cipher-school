@@ -26,8 +26,8 @@ void Caesar::encrypt(string &s, int k) {
             continue;
         }
     }
-    cout << "Encrypt Result : " << temp << endl;
     s = string(temp);
+    cout << "Encrypt Result : " << s << endl;
 }
 void Caesar::decrypt(string &s, int k) {
     char temp[30];
@@ -48,8 +48,8 @@ void Caesar::decrypt(string &s, int k) {
             continue;
         }
     }
-    cout << "Decrypt Result : " << temp << endl;
     s = string(temp);
+    cout << "Decrypt Result : " << s << endl;
 }
 void Caesar::print() {
     cout << "Input : " << this->input << endl;

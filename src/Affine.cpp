@@ -68,8 +68,8 @@ void Affine::encrypt(string &s, int &a, int &b) {
             continue;
         }
     }
-    cout << "Encrypt Result : " << temp << endl;
     s = string(temp);
+    cout << "Encrypt Result : " << s << endl;
 }
 void Affine::decrypt(string &s, int a, int b) {
     char temp[30];
@@ -90,8 +90,8 @@ void Affine::decrypt(string &s, int a, int b) {
             continue;
         }
     }
-    cout << "Decrypt Result : " << temp << endl;
     s = string(temp);
+    cout << "Decrypt Result : " << s << endl;
 }
 void Affine::print() {
     encrypt(this->input, this->a, this->b);

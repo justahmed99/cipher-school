@@ -30,8 +30,8 @@ void ROT13::encrypt(string &s) {
             continue;
         }
     }
-    cout << "Encrypt Result : " << temp << endl;
     s = string(temp);
+    cout << "Encrypt Result : " << s << endl;
 }
 void ROT13::decrypt(string &s) {
     char temp[30];
@@ -52,8 +52,8 @@ void ROT13::decrypt(string &s) {
             continue;
         }
     }
-    cout << "Decrypt Result : " << temp << endl;
     s = string(temp);
+    cout << "Decrypt Result : " << s << endl;
 }
 void ROT13::print() {
     cout << "Input : " << this->input << endl;
