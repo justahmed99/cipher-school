@@ -9,9 +9,9 @@ int Vignere::mod(int x, int y) {
     return ((x % y) + y) % y;
 }
 void Vignere::encrypt(string &s, string k) {
-    char temp[30];
+    char temp[256];
     strcpy(temp, input.c_str());
-    char ky[30];
+    char ky[256];
     strcpy(ky, key.c_str());
     for(int i = 0, j = 0; i < strlen(temp); i++, j++) {
         if(j >= strlen(ky)) {
@@ -32,9 +32,9 @@ void Vignere::encrypt(string &s, string k) {
     cout << "Encrypt Result : " << s << endl;
 }
 void Vignere::decrypt(string &s, string k) {
-    char temp[30];
+    char temp[256];
     strcpy(temp, input.c_str());
-    char ky[30];
+    char ky[256];
     strcpy(ky, key.c_str());
     for(int i = 0, j = 0; i < strlen(temp); i++, j++) {
         if(j >= strlen(ky)) {

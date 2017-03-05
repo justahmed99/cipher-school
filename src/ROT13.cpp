@@ -12,20 +12,16 @@ int ROT13::mod(int x, int y) {
     return ((x % y) + y) % y;
 }
 void ROT13::encrypt(string &s) {
-    char temp[30];
+    char temp[256];
     strcpy(temp, s.c_str());
-    for(int i = 0; i < 30; i++) {
+    for(int i = 0; i < strlen(temp); i++) {
         char buff;
-        if(temp[i] != '\0') {
-            if(temp[i] >= 'A' && temp[i] <= 'Z') {
-                buff = mod((int)((temp[i] - 'A') + 13), 26);
-                temp[i] = buff + 'A';
-            } else if(temp[i] >= 'a' && temp[i] <= 'z') {
-                buff = mod((int)((temp[i] - 'a') + 13), 26);
-                temp[i] = buff + 'a';
-            } else {
-                continue;
-            }
+        if(temp[i] >= 'A' && temp[i] <= 'Z') {
+            buff = mod((int)((temp[i] - 'A') + 13), 26);
+            temp[i] = buff + 'A';
+        } else if(temp[i] >= 'a' && temp[i] <= 'z') {
+            buff = mod((int)((temp[i] - 'a') + 13), 26);
+            temp[i] = buff + 'a';
         } else {
             continue;
         }
@@ -34,20 +30,16 @@ void ROT13::encrypt(string &s) {
     cout << "Encrypt Result : " << s << endl;
 }
 void ROT13::decrypt(string &s) {
-    char temp[30];
+    char temp[256];
     strcpy(temp, s.c_str());
-    for(int i = 0; i < 30; i++) {
+    for(int i = 0; i < strlen(temp); i++) {
         char buff;
-        if(temp[i] != '\0') {
-            if(temp[i] >= 'A' && temp[i] <= 'Z') {
-                buff = mod((int)((temp[i] - 'A') - 13), 26);
-                temp[i] = buff + 'A';
-            } else if(temp[i] >= 'a' && temp[i] <= 'z') {
-                buff = mod((int)((temp[i] - 'a') - 13), 26);
-                temp[i] = buff + 'a';
-            } else {
-                continue;
-            }
+        if(temp[i] >= 'A' && temp[i] <= 'Z') {
+            buff = mod((int)((temp[i] - 'A') - 13), 26);
+            temp[i] = buff + 'A';
+        } else if(temp[i] >= 'a' && temp[i] <= 'z') {
+            buff = mod((int)((temp[i] - 'a') - 13), 26);
+            temp[i] = buff + 'a';
         } else {
             continue;
         }
