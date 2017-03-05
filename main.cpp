@@ -2,6 +2,7 @@
 #include "Caesar.h"
 #include "ROT13.h"
 #include "Affine.h"
+#include "Vignere.h"
 
 using namespace std;
 
@@ -42,6 +43,15 @@ int main() {
             af->print();
             break;
         }
+        case 4 : {
+            cout << "---- Vignere ----" << endl;
+            string input, key;
+            cout << "Input string : "; cin >> input;
+            cout << "Input key stream : "; cin >> key;
+            Vignere *v = new Vignere(input, key);
+            v->print();
+            break;
+        }
         default : {
             cout << "Your choice isn't found" << endl;
         }
@@ -66,4 +76,5 @@ void menu() {
     cout << "1. Caesar" << endl;
     cout << "2. ROT13" << endl;
     cout << "3. Affine" << endl;
+    cout << "4. Vignere" << endl;
 }

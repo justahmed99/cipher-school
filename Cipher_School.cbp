@@ -34,10 +34,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Affine.h" />
 		<Unit filename="include/Caesar.h" />
 		<Unit filename="include/ROT13.h" />
 		<Unit filename="include/Vignere.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Affine.cpp" />
 		<Unit filename="src/Caesar.cpp" />
 		<Unit filename="src/ROT13.cpp" />
 		<Unit filename="src/Vignere.cpp" />
